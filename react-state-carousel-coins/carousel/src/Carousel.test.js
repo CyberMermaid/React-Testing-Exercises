@@ -2,6 +2,13 @@ import { render, fireEvent } from "@testing-library/react";
 import Carousel from "./Carousel";
 import TEST_IMAGES from "./_testCommon.js";
 
+// **Smoke Tests**: Does the component render? 
+it("renders without crashing", function() {
+  render(<Carousel/>);
+});
+
+  // **Snapshot Tests**: Does the component’s rendered HTML render in the way you expect?
+
 it("works when you click on the right arrow", function() {
   const { container } = render(
     <Carousel
